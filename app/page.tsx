@@ -1,5 +1,6 @@
 import { createServerClientInstance } from '@/lib/supabase/server';
 import AuthButtons from './components/AuthButtons';
+import Wheel from './components/Wheel';
 
 export default async function Home() {
   const supabase = await createServerClientInstance();
@@ -25,7 +26,7 @@ export default async function Home() {
             <div className="space-y-4">
               <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-lg transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-red-900/40">
                 GIRAR LA RUEDA
-              </button>
+              <Wheel />
               
               <form action="/auth/signout" method="post">
                 <button className="text-gray-500 hover:text-gray-300 text-sm underline transition">
